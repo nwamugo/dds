@@ -1,0 +1,12 @@
+@mixin animation-settings($delay) {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-delay: $delay;
+  animation-fill-mode: backwards;
+}
+@mixin layout-and-background($grid-area, $bg-image, $bg-position) {
+  background-size: cover;
+  grid-area: $grid-area;
+  background-image: url($bg-image);
+  background-position: $bg-position;
+}

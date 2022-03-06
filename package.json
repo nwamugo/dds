@@ -1,0 +1,27 @@
+{
+  "name": "dds",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Web Application for ordering drinks",
+  "main": "landing.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Drinks",
+    "Order",
+    "Wine",
+    "Water",
+    "Juice",
+    "Canned"
+  ],
+  "author": "Duziem Ugoji",
+  "contributors": [
+    "Duziem Ugoji <https://www.linkedin.com/in/duziem-ugoji/>"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

@@ -1,0 +1,76 @@
+.btn-liquid,
+.btn-large {
+  &:link,
+  &:visited {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    color: inherit;
+    border: .1rem solid $color-grey3;
+    /* height: 4rem; */
+    padding: 2.4rem 3.2rem;
+    border-radius: 1.5rem;
+    background-color: rgba($color-white,0.1);
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: -.1rem .5rem 2rem rgba($color-black,.2);
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+    transition: color .5s, background .5s;
+  }
+
+  &:hover {
+    & span {
+      background: $color-primary-dark;
+      color: $color-white;
+    }
+    .liquid {
+      top: -50%;
+    }
+  }
+
+  &:active {
+    transform: translateY(.2rem);
+    box-shadow: none;
+  }
+
+  .liquid {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 210%;
+    background-color: $color-primary-dark;
+    box-shadow: 0 0 5rem rgba($color-black,.5);
+    transition: top 1s;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 50rem;
+      height: 48rem;
+      top: -50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -75%);
+    }
+    &::before {
+      border-radius: 45%;
+      background-color: rgba($color-white,1);
+      animation: wineInButton 5s linear infinite;
+    }
+    &::after {
+      border-radius: 40%;
+      background-color: rgba($color-white,0.5);
+      animation: wineInButton 10s linear infinite;
+    }
+  }
+}
+

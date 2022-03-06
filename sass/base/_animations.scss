@@ -1,0 +1,19 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes wineInButton {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg)
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg)
+  }
+}
