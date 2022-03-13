@@ -1,0 +1,51 @@
+div.item {
+  box-shadow: 0 0 0 .3rem rgba(104,12,13,.6);
+  padding: 2rem;
+  margin: 2rem;
+  background: #b3a8a8;
+  & > div {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: flex-start;
+  }
+  div div:first-child {
+    width: 13rem;
+    height: 13rem;
+    border-radius: .5rem;
+    padding: 3rem 0 1rem 3.5rem;
+    background: $color-cream;
+  }
+  div div:last-child {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    justify-content: space-around;
+  }
+
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+input.increment,
+input.decrement {
+  border-radius: 50%;
+  padding: .5rem 1rem;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+input.quantity {
+  width: 60%;
+  background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 4rem;
+}
+
+div.order-pad-soda {
+  margin-top: -1rem;
+}

@@ -18,3 +18,15 @@ h2 {
 p.tagline {
   text-align: center;
 }
+
+h4.item-name {
+  margin-bottom: 3.2rem;
+  font-size: 2rem;
+  img {
+    vertical-align: text-bottom;
+  }
+  &.soda img {
+    float: left;
+    margin-right: 1.2rem;
+  }
+}

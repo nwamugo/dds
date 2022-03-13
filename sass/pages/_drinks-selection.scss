@@ -3,25 +3,26 @@ div.bar {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 5% 30% 30% 30%;
-  grid-template-rows: repeat(5, 20%);
+  grid-template-rows: 20% 13% 10% 20%;
 }
 
 div.guest {
   grid-column: 1 / 2;
   grid-row: span 5;
-  background: red;
+  background-image: url(../../img/dragon-scales.svg);
+  background-size: cover;
 }
 
-div.content {
+div.logistics {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
-  background: seagreen;
 }
 
 div.selection {
   grid-column: 2 / 4;
   grid-row: 3 / 6;
-  background: purple;
+  background-image: url(../../img/subtle-prism.svg);
+  background-size: cover;
 
   .categories {
     display: grid;
@@ -36,7 +37,7 @@ div.information {
 
 div.cashier {
   grid-column: 4 / 5;
-  grid-row: 3 / 5;
+  grid-row: 5 / 6;
 
   .cost {
     display: flex;

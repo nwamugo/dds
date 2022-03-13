@@ -19,7 +19,7 @@
 <body>
   <div class="bar">
     <div class="guest"><h2>Guest</h2></div>
-    <div class="content">
+    <div class="logistics">
       <h2>Abuja</h2>
       <form class="login-form">
         <h3>Login</h3>
@@ -43,15 +43,122 @@
 
     <div class="selection">
       <div class="categories">
-        <div>Wine</div>
-        <div>Juice</div>
-        <div>Soft Drinks</div>
-        <div>Water</div>
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/wine.svg" alt="">
+            Wine
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 12 drinks</small>
+          <br><br>
+          <label for="">Alcohol Spread:</label>
+          <input type="range" name="" id="">
+          50%
+        </div>
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/juice.svg" alt="" class="juice">
+            <span>Juice</span>
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 12 drinks</small>
+        </div>
+        <div class="item">
+          <h4 class="item-name soda">
+            <img src="img/icons/soda.svg" alt="">
+            <span>Soft Drinks</span>
+          </h4>
+          <div class="order-pad-soda">
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = <b>24</b> drinks</small>
+        </div>
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/water.svg" alt="">
+            Water
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 6 drinks</small>
+        </div>
       </div>
     </div>
 
     <div class="information">
       Order History
+      <div>
+        <div>
+          13/03/2021
+          ID: 24589P
+          <p>Wine: 12 cartons</p>
+        </div>
+        <div>
+          ₦235,000
+          fulfilled
+        </div>
+      </div>
     </div>
     <div class="cashier">
       <h1 class="fineprint">Drinks Don Show © 2021</h1>
