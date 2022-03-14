@@ -245,13 +245,13 @@ div.landing {
 div.wine {
   background-size: cover;
   grid-area: wine;
-  background-image: url("../img/wine1.jpg");
+  background-image: url("../img/wine.jpg");
   background-position: center; }
 
 div.juice {
   background-size: cover;
   grid-area: juice;
-  background-image: url("../img/juice4.jpg");
+  background-image: url("../img/juice.jpg");
   background-position: top;
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -261,7 +261,7 @@ div.juice {
 div.soft {
   background-size: cover;
   grid-area: soft;
-  background-image: url("../img/soft1.jpg");
+  background-image: url("../img/soft.jpg");
   background-position: top;
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -271,7 +271,7 @@ div.soft {
 div.water {
   background-size: cover;
   grid-area: water;
-  background-image: url("../img/water3.jpg");
+  background-image: url("../img/water.jpg");
   background-position: unset;
   animation-name: moveInRight;
   animation-duration: 1s;
