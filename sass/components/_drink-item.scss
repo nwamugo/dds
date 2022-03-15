@@ -1,18 +1,18 @@
 div.item {
   box-shadow: 0 0 0 .3rem rgba(104,12,13,.6);
   padding: 2rem;
-  margin: 2rem;
+  margin: 3em auto;
   background: #b3a8a8;
+  width: 21.2rem;
   & > div {
     display: flex;
-    flex-wrap: no-wrap;
     justify-content: flex-start;
   }
   div div:first-child {
     width: 13rem;
     height: 13rem;
     border-radius: .5rem;
-    padding: 3rem 0 1rem 3.5rem;
+    padding: 3rem 0 1rem 1rem;
     background: $color-cream;
   }
   div div:last-child {
@@ -38,12 +38,12 @@ input.decrement {
 }
 
 input.quantity {
-  width: 60%;
+  width: 80%;
   background: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 div.order-pad-soda {

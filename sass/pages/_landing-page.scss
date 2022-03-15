@@ -1,0 +1,25 @@
+.landing-page {
+  div.wine {
+    @include layout-and-background(wine, "../img/wine.jpg", center);
+  }
+
+  div.juice {
+    @include layout-and-background(juice, "../img/juice.jpg", top);
+    @include animation-settings(1s);
+  }
+
+  div.soft {
+    @include layout-and-background(soft, "../img/soft.jpg", top);
+    @include animation-settings(2s);
+  }
+
+  div.water {
+    @include layout-and-background(water, "../img/water.jpg", unset);
+    @include animation-settings(3s);
+  }
+
+  div.porch {
+    grid-area: porch;
+    background: $color-white-shade;
+  }
+}

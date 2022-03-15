@@ -23,11 +23,6 @@ div.selection {
   grid-row: 3 / 6;
   background-image: url(../../img/subtle-prism.svg);
   background-size: cover;
-
-  .categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 div.information {
@@ -38,19 +33,36 @@ div.information {
 div.cashier {
   grid-column: 4 / 5;
   grid-row: 5 / 6;
+}
 
-  .cost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: .7;
 
-    .cost-currency {
-      font-size: 2rem;
-    }
+div.page-layout.drinks-selection {
+  grid-template-areas: "wine juice soft porch";
+  grid-template-columns: 1fr 1fr 2fr 1.85fr;
+  div.wine {
+    // @include layout-and-background(wine, "../img/wine.jpg", center);
+  }
 
-    .cost-amount {
-      font-size: 6rem;
-    }
+  div.juice {
+    // @include layout-and-background(juice, "../img/juice.jpg", top);
+    // @include animation-settings(1s);
+  }
+
+  div.soft {
+    // @include layout-and-background(soft, "../img/soft.jpg", top);
+    // @include animation-settings(2s);
+    height: 100vh;
+    overflow-y: scroll;
+    background-image: url(../../img/subtle-prism.svg);
+  }
+
+  div.water {
+    // @include layout-and-background(water, "../img/water.jpg", unset);
+    // @include animation-settings(3s);
+  }
+
+  div.porch {
+    grid-area: porch;
+    background: $color-white-shade;
   }
 }

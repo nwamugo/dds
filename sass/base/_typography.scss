@@ -15,8 +15,33 @@ h2 {
   transform: translateX(-50%);
 }
 
+.drinks-selection .soft h2 {
+  left: 0;
+  transform: none;
+  position: relative;
+  width: fit-content;
+  padding: .5rem 2rem;
+  margin: 0 auto;
+  box-shadow: 0 0 0 .3rem rgba(104,12,13,.6);
+}
+
 p.tagline {
   text-align: center;
+}
+
+div.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: .7;
+
+  .cost-currency {
+    font-size: 2rem;
+  }
+
+  .cost-amount {
+    font-size: 6rem;
+  }
 }
 
 h4.item-name {

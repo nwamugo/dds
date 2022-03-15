@@ -1,0 +1,7 @@
+div.page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "wine juice soft water porch";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.85fr;
+}

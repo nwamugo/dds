@@ -43,8 +43,27 @@ h2 {
   left: 50%;
   transform: translateX(-50%); }
 
+.drinks-selection .soft h2 {
+  left: 0;
+  transform: none;
+  position: relative;
+  width: fit-content;
+  padding: .5rem 2rem;
+  margin: 0 auto;
+  box-shadow: 0 0 0 0.3rem rgba(104, 12, 13, 0.6); }
+
 p.tagline {
   text-align: center; }
+
+div.cost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: .7; }
+  div.cost .cost-currency {
+    font-size: 2rem; }
+  div.cost .cost-amount {
+    font-size: 6rem; }
 
 h4.item-name {
   margin-bottom: 3.2rem;
@@ -129,17 +148,17 @@ h4.item-name {
 div.item {
   box-shadow: 0 0 0 0.3rem rgba(104, 12, 13, 0.6);
   padding: 2rem;
-  margin: 2rem;
-  background: #b3a8a8; }
+  margin: 3em auto;
+  background: #b3a8a8;
+  width: 21.2rem; }
   div.item > div {
     display: flex;
-    flex-wrap: no-wrap;
     justify-content: flex-start; }
   div.item div div:first-child {
     width: 13rem;
     height: 13rem;
     border-radius: .5rem;
-    padding: 3rem 0 1rem 3.5rem;
+    padding: 3rem 0 1rem 1rem;
     background: #ECDCB0; }
   div.item div div:last-child {
     display: flex;
@@ -159,12 +178,12 @@ input.decrement {
   cursor: pointer; }
 
 input.quantity {
-  width: 60%;
+  width: 80%;
   background: transparent;
   border-top: none;
   border-left: none;
   border-right: none;
-  font-size: 4rem; }
+  font-size: 3rem; }
 
 div.order-pad-soda {
   margin-top: -1rem; }
@@ -180,7 +199,7 @@ div.categories {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10rem 5rem; }
+  padding: 2rem 5rem; }
 
 .fineprint {
   font-size: 1.5rem;
@@ -189,9 +208,29 @@ div.categories {
   left: 50%;
   transform: translateX(-50%); }
 
+header {
+  backdrop-filter: blur(4rem);
+  z-index: 2;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0; }
+  header div {
+    background: antiquewhite;
+    text-align: center; }
+  header label {
+    margin-right: 1.5rem; }
+
 div.outlet {
   text-align: center;
   margin-top: 60vh; }
+
+div.page-layout {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "wine juice soft water porch";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.85fr; }
 
 div.bar {
   display: grid;
@@ -215,9 +254,6 @@ div.selection {
   grid-row: 3 / 6;
   background-image: url(../../img/subtle-prism.svg);
   background-size: cover; }
-  div.selection .categories {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); }
 
 div.information {
   grid-column: 4 / 5;
@@ -226,29 +262,25 @@ div.information {
 div.cashier {
   grid-column: 4 / 5;
   grid-row: 5 / 6; }
-  div.cashier .cost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: .7; }
-    div.cashier .cost .cost-currency {
-      font-size: 2rem; }
-    div.cashier .cost .cost-amount {
-      font-size: 6rem; }
 
-div.landing {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-areas: "wine juice soft water porch"; }
+div.page-layout.drinks-selection {
+  grid-template-areas: "wine juice soft porch";
+  grid-template-columns: 1fr 1fr 2fr 1.85fr; }
+  div.page-layout.drinks-selection div.soft {
+    height: 100vh;
+    overflow-y: scroll;
+    background-image: url(../../img/subtle-prism.svg); }
+  div.page-layout.drinks-selection div.porch {
+    grid-area: porch;
+    background: #fefefe; }
 
-div.wine {
+.landing-page div.wine {
   background-size: cover;
   grid-area: wine;
   background-image: url("../img/wine.jpg");
   background-position: center; }
 
-div.juice {
+.landing-page div.juice {
   background-size: cover;
   grid-area: juice;
   background-image: url("../img/juice.jpg");
@@ -258,7 +290,7 @@ div.juice {
   animation-delay: 1s;
   animation-fill-mode: backwards; }
 
-div.soft {
+.landing-page div.soft {
   background-size: cover;
   grid-area: soft;
   background-image: url("../img/soft.jpg");
@@ -268,7 +300,7 @@ div.soft {
   animation-delay: 2s;
   animation-fill-mode: backwards; }
 
-div.water {
+.landing-page div.water {
   background-size: cover;
   grid-area: water;
   background-image: url("../img/water.jpg");
@@ -278,6 +310,6 @@ div.water {
   animation-delay: 3s;
   animation-fill-mode: backwards; }
 
-div.porch {
+.landing-page div.porch {
   grid-area: porch;
   background: #fefefe; }
