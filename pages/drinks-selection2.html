@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="application-name" content="DrinksDonShow">
+  <meta name="author" content="Duziem Ugoji">
+  <meta name="description" content="Order Your Drinks for Weddings, Parties, Occasions">
+  <meta name="keywords" content="Drinks, Order, Wine, Water, Juice, Soft, Weddings, Parties">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+
+  <title>DDS | Drinks Don Show</title>
+</head>
+<body>
+  <div class="page-layout drinks-selection">
+    <div class="wine">
+      We deliver your drinks chilled to your event.
+      <br><br>
+
+      <h2>Welcome Duziem</h2>
+    </div>
+    <div class="juice">
+      <header>
+        <h2>Order History</h2>
+        <div>
+          filter
+        </div>
+      </header>
+      When you have successfully placed your order, it will show up here
+        <br>
+      the styling will fade in and out until server confirms
+      receipt of order
+      <div class="order-history-item">
+        <small>ID: 24589P</small><br>
+        <b>₦235,000</b><br>
+        <small>Date: 13/03/2022</small>
+        <hr>
+        <div>
+          <table>
+            <thead>
+              <th></th>
+              <th>Qty <br> <small>(drinks)</small></th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wine</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>Juice</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>Soft Drinks</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Water</td>
+                <td>24</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <p>Delivery + Storage</p>
+            <p>Waiting service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="soft">
+      <header class="categories-header">
+        <h2>4 Categories</h2>
+        <div>
+          <label>
+            <input type="checkbox" name="category" id="" value="wine">
+            Wine
+          </label>
+          <label>
+            <input type="checkbox" name="category" id="" value="juice">
+            Juice
+          </label>
+          <label>
+            <input type="checkbox" name="category" id="" value="soft">
+            Soft
+          </label>
+          <label>
+            <input type="checkbox" name="category" id="" value="water">
+            Water
+          </label>
+        </div>
+      </header>
+      <div class="categories">
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/wine.svg" alt="">
+            Wine
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 12 drinks</small>
+          <br><br>
+          <label for="">Alcohol Spread:</label>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            name=""
+            id=""
+            onchange="changeAlcoholSpread(this.value)"
+            step="25"
+          >
+          50%
+        </div>
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/juice.svg" alt="" class="juice">
+            <span>Juice</span>
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 12 drinks</small>
+        </div>
+        <div class="item">
+          <h4 class="item-name soda">
+            <img src="img/icons/soda.svg" alt="">
+            <span>Soft Drinks</span>
+          </h4>
+          <div class="order-pad-soda">
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = <b>24</b> drinks</small>
+        </div>
+        <div class="item">
+          <h4 class="item-name">
+            <img src="img/icons/water.svg" alt="">
+            Water
+          </h4>
+          <div>
+            <div>
+              <input
+                type="number"
+                value="0"
+                min="0"
+                name=""
+                id=""
+                class="quantity"
+              >
+              carton(s)
+            </div>
+            <div>
+              <input type="button" value="&utrif;" class="increment">
+              <input type="button" value="&dtrif;" class="decrement">
+            </div>
+          </div>
+          <small>**1 carton = 6 drinks</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="porch">
+      Event City: Abuja <br>
+      Venue Address: <br>
+      Date of event: <br>
+      Time of event: <br>
+
+      <br>
+      After delivering the drinks, do you want the drinks served by us? <br>
+
+      Your final order looks like this: <br>
+      waiter service <br>
+      delivery + storage <br>
+      142 total drinks
+
+      <div class="sidebar-bottom tile centered">
+        <small>Selection amounts to</small>
+        <div class="cost">
+          <span class="cost-currency">₦</span>
+          <span class="cost-amount">235,000</span>
+          <span class="cost-cents">.00</span>
+        </div>
+        <a class="cta-button btn-large" href="/pricing">
+          Proceed to Payment
+        </a>
+      </div>
+      <h1 class="fineprint">Drinks Don Show © 2021</h1>
+    </div>
+  </div>
+</body>
+</html>
