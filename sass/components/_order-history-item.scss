@@ -1,0 +1,35 @@
+div.order-history-item {
+  box-shadow: 0 0 0 .15rem rgba(104,12,13,.6);
+  margin: 2rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  text-align: center;
+  background-image: linear-gradient(0deg, #fefefe, #beddf5);
+  hr {
+    // border: none
+    border-top: .1em solid rgba(104,12,13,.6);
+    // border-bottom: none;
+  }
+  small {
+  }
+  // & > div {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   text-align: start;
+  //   div:last-child {
+  //     text-align: end;
+  //   }
+  // }
+  table {
+    border: .1rem solid;
+    border-top: none;
+    width: 100%;
+  }
+  td {
+    // width: 50%;
+    border: .1rem solid;
+  }
+  table + div {
+    border: .1rem solid;
+  }
+}
