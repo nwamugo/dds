@@ -1,4 +1,16 @@
-@keyframes moveInRight {
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: .25; }
+  60% {
+    opacity: .5; }
+  80% {
+    opacity: .75; }
+  100% {
+    opacity: 1; } }
+
+@keyframes moveFromRight {
   0% {
     opacity: 0;
     transform: translateX(100%); }
@@ -75,6 +87,16 @@ h4.item-name {
     float: left;
     margin-right: 1.2rem; }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield; }
+
 .btn-liquid:link, .btn-liquid:visited,
 .btn-large:link,
 .btn-large:visited {
@@ -149,8 +171,8 @@ h4.item-name {
 div.item {
   box-shadow: 0 0 0 0.3rem rgba(104, 12, 13, 0.6);
   padding: 2rem;
-  margin: 3em auto;
-  background: #b3a8a8;
+  margin: 2em auto;
+  background-image: linear-gradient(90deg, #ff8b8e, #b3a8a8);
   width: 21.2rem; }
   div.item > div {
     display: flex;
@@ -196,6 +218,24 @@ div.logo img {
   left: 50%;
   transform: translateX(-50%); }
 
+div.order-history-item {
+  box-shadow: 0 0 0 0.15rem rgba(104, 12, 13, 0.6);
+  margin: 2rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  text-align: center;
+  background-image: linear-gradient(0deg, #fefefe, #beddf5); }
+  div.order-history-item hr {
+    border-top: 0.1em solid rgba(104, 12, 13, 0.6); }
+  div.order-history-item table {
+    border: .1rem solid;
+    border-top: none;
+    width: 100%; }
+  div.order-history-item td {
+    border: .1rem solid; }
+  div.order-history-item table + div {
+    border: .1rem solid; }
+
 ::-webkit-scrollbar {
   width: 1rem;
   background-color: #f5f5f5; }
@@ -229,10 +269,12 @@ header {
   position: sticky;
   top: 0; }
   header div {
-    background: antiquewhite;
     text-align: center; }
-  header label {
-    margin-right: 1.5rem; }
+  header div > label + label {
+    margin-left: 1.5rem; }
+
+header.categories-header div {
+  background: antiquewhite; }
 
 div.outlet {
   text-align: center;
@@ -279,6 +321,11 @@ div.cashier {
 div.page-layout.drinks-selection {
   grid-template-areas: "wine juice soft porch";
   grid-template-columns: 1fr 1fr 2fr 1.85fr; }
+  div.page-layout.drinks-selection div.wine {
+    overflow-y: scroll; }
+  div.page-layout.drinks-selection div.juice {
+    overflow-y: scroll;
+    background-color: rgba(255, 253, 208, 0.4); }
   div.page-layout.drinks-selection div.soft {
     height: 100vh;
     overflow-y: scroll;
@@ -291,14 +338,18 @@ div.page-layout.drinks-selection {
   background-size: cover;
   grid-area: wine;
   background-image: url("../img/wine.jpg");
-  background-position: center; }
+  background-position: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-fill-mode: backwards; }
 
 .landing-page div.juice {
   background-size: cover;
   grid-area: juice;
   background-image: url("../img/juice.jpg");
   background-position: top;
-  animation-name: moveInRight;
+  animation-name: moveFromRight;
   animation-duration: 1s;
   animation-delay: 1s;
   animation-fill-mode: backwards; }
@@ -308,7 +359,7 @@ div.page-layout.drinks-selection {
   grid-area: soft;
   background-image: url("../img/soft.jpg");
   background-position: top;
-  animation-name: moveInRight;
+  animation-name: moveFromRight;
   animation-duration: 1s;
   animation-delay: 2s;
   animation-fill-mode: backwards; }
@@ -318,7 +369,7 @@ div.page-layout.drinks-selection {
   grid-area: water;
   background-image: url("../img/water.jpg");
   background-position: unset;
-  animation-name: moveInRight;
+  animation-name: moveFromRight;
   animation-duration: 1s;
   animation-delay: 3s;
   animation-fill-mode: backwards; }
